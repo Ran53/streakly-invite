@@ -44,7 +44,7 @@
         }
         
         h1 {
-            color: #E0E0E0;
+            color: #FFFFFF;
             margin-bottom: 10px;
             font-size: 24px;
             font-weight: 600;
@@ -52,14 +52,14 @@
         }
         
         .challenge-name {
-            color: #00D9FF;
+            color: #FFFFFF;
             font-weight: bold;
             font-size: 22px;
             margin: 20px 0;
             padding: 16px;
-            background: rgba(0, 217, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(0, 217, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .details {
@@ -80,7 +80,7 @@
         }
         
         .detail-item strong {
-            color: #E0E0E0;
+            color: #FFFFFF;
             font-weight: 600;
         }
         
@@ -88,7 +88,7 @@
             display: block;
             width: 100%;
             padding: 18px;
-            background: #00D9FF;
+            background: #FFFFFF;
             color: #1A1A1A;
             text-decoration: none;
             border-radius: 12px;
@@ -98,13 +98,13 @@
             transition: all 0.2s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
         }
         
         .btn:hover {
-            background: #00C4E6;
+            background: #F0F0F0;
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 217, 255, 0.4);
+            box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
         }
         
         .btn:active {
@@ -120,7 +120,7 @@
         
         .spinner {
             border: 3px solid #444444;
-            border-top: 3px solid #00D9FF;
+            border-top: 3px solid #FFFFFF;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -152,7 +152,7 @@
         }
         
         .error-message a {
-            color: #00D9FF;
+            color: #FFFFFF;
             text-decoration: underline;
             font-weight: 600;
         }
@@ -165,7 +165,7 @@
         }
         
         .footer-text a {
-            color: #00D9FF;
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: 600;
         }
@@ -173,20 +173,6 @@
         .footer-text a:hover {
             text-decoration: underline;
         }
-        
-        /* Commented out debug section */
-        /* 
-        .debug {
-            display: none;
-            background: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-size: 11px;
-            word-break: break-all;
-            text-align: left;
-        }
-        */
     </style>
 </head>
 <body>
@@ -231,11 +217,6 @@
                 Download Streakly
             </a>
         </p>
-        
-        <!-- Commented out debug section -->
-        <!--
-        <div class="debug" id="debug"></div>
-        -->
     </div>
 
     <script>
@@ -246,19 +227,6 @@
         const name = urlParams.get('n');
         const duration = urlParams.get('d');
         const creator = urlParams.get('by');
-        
-        /* Commented out debug info
-        // Debug info
-        const debugDiv = document.getElementById('debug');
-        debugDiv.innerHTML = `
-            Challenge ID: ${challengeId}<br>
-            Group ID: ${groupId}<br>
-            Name: ${name}<br>
-            Duration: ${duration}<br>
-            Creator: ${creator}
-        `;
-        debugDiv.style.display = 'block';
-        */
         
         // Display challenge info
         if (name) {
@@ -279,10 +247,6 @@
         const deepLink = `streakly://join?c=${challengeId}&g=${groupId}&n=${name}&d=${duration}&by=${creator}`;
         
         console.log('Deep link:', deepLink);
-        
-        /* Commented out debug deep link display
-        debugDiv.innerHTML += `<br><br>Deep Link:<br>${deepLink}`;
-        */
         
         // Function to open app
         function openApp() {
